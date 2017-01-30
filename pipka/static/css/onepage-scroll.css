@@ -1,0 +1,103 @@
+body, html {
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  transition: opacity 400ms;
+  background: #434343 url("../img/back.jpg")100% 100% no-repeat;
+ background-size: cover; /* Масштабируем фон */
+}
+
+body, .onepage-wrapper, html {
+  display: block;
+  position: static;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+  
+}
+
+.onepage-wrapper .section {
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-pagination {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  z-index: 5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.onepage-pagination li {
+  padding: 0;
+  text-align: center;
+}
+.onepage-pagination li a{
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+  
+}
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.onepage-pagination li a.active:before{
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid black;
+  margin-top: -4px;
+  left: 8px;
+}
+
+#first{
+        z-index:10;
+                position:absolute;
+        width:100%;
+
+    }
+ #second,#third,#fourth, #fifth{
+        position:absolute;
+        width:100%;
+        top:0;
+        transform: translate3d(0px, 0%, 0px);
+        transition: all 500ms ease;
+    }
+    #second  {
+        z-index:9;
+    
+    }
+
+    #third {
+        z-index:8;
+    }
+
+    #fourth {
+        z-index:7;
+    }
+    .paralax_img{
+        position:absolute;
+    }
+    #fifth{
+        z-index:5;;
+    }

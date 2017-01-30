@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Сает</title>
+
+        <script src="{% static 'js/jquery_1_9_2.js' %}"></script>
+        <script src="{% static 'js/highstock.js' %}"></script>
+        <script src="{% static 'js/exporting.js' %}"></script>
+        <script src="{% static 'js/grid.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'js/paralax.js' %}"></script>
+        <script src="{% static 'js/jquery.onepage-scroll.js' %}"></script>
+        <link href="{% static 'css/onepage-scroll.css' %}" rel='stylesheet' type='text/css'>
+        <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="first" >
+            <section>
+
+                <div id="chart_1" class="chart"></div>
+            </section>
+            <section>
+                <div id="chart_1" class="chart"></div>
+            </section>
+            <section>
+                <div id="chart_1" class="chart"></div>
+            </section>
+            <section>
+                <div id="chart_1" class="chart"></div>
+            </section>
+        </div>
+        <div id='second' class="onepage-wrapper">
+            {% for o in images %}
+                <img src="{{STATIC_PREFIX}}img/{{ o }}" class='paralax_img'/>
+            {%endfor%}
+        </div>
+        <div id='third' class="onepage-wrapper">
+            
+        </div>
+        <div id='fourth' class="onepage-wrapper">
+            
+        </div>
+        <div id='fifth' class="onepage-wrapper">
+            
+        </div>
+    </body>
+</html>
